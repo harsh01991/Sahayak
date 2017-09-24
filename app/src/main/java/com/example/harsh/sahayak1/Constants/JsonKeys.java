@@ -9,7 +9,7 @@ public class JsonKeys {
     public static final  String apikey = "/apikey/mghg44ea29/";
 
     //Live Train Status API
-    public static final String LIVE_TRAIN_URL = JsonURL+"live/train/";
+    public static final String LIVE_TRAIN_URL = JsonURL + "live/train/";
     //Station Suggested API
     public static final String sugStation = JsonURL+"suggest_station/name/";
 
