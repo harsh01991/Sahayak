@@ -11,7 +11,7 @@ public class JsonKeys {
     //Live Train Status API
     public static final String LIVE_TRAIN_URL = JsonURL + "live/train/";
     //Station Suggested API
-    public static final String sugStation = JsonURL+"suggest_station/name/";
+    public static final String sugStation = JsonURL+ "suggest_station/name/";
 
     //Fare Enquiry API
     public static final String FARE_URL = JsonURL+"fare/train/";
