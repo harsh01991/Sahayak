@@ -14,7 +14,7 @@ public class JsonKeys {
     public static final String sugStation = JsonURL+ "suggest_station/name/";
 
     //Fare Enquiry API
-    public static final String FARE_URL = JsonURL+"fare/train/";
+    public static final String FARE_URL = JsonURL+ "fare/train/";
 
     //Search Train Enquiry
     public static final String SEARCH_URL = JsonURL+"between/source/";
