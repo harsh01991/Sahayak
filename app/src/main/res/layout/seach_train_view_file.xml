@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView1"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="7dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trainNumber"
+                android:layout_margin="10dp"
+                android:text="12345" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trainName"
+                android:layout_toEndOf="@+id/trainNumber"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:text="Jbp Ypr Super Fast Express" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunday"
+                android:layout_below="@+id/trainNumber"
+                android:text="@string/sunday"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/sunday"
+                android:text="@string/monday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/monday"
+                android:text="@string/tuesday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wednesday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/tuesday"
+                android:text="@string/wednesday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/thursday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/wednesday"
+                android:text="@string/tuesday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/thursday"
+                android:text="@string/friday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saturday"
+                android:layout_below="@+id/trainNumber"
+                android:layout_toEndOf="@+id/friday"
+                android:text="@string/sunday"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp" />
+
+          <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:id="@+id/clockIcon"
+                android:src="@drawable/ic_access_time_black_24dp"
+                android:layout_below="@+id/trainName"
+                android:layout_margin="3dp"
+                android:alpha="0.60"
+                android:layout_toStartOf="@+id/travelTime"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/travelTime"
+                android:text="23h 30m"
+                android:textSize="16sp"
+                android:layout_below="@+id/trainName"
+                android:layout_marginTop="3dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="40dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/srcDepTime"
+                android:layout_below="@+id/sunday"
+                android:text="10:10"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/srcStationCode"
+                android:text="NGP"
+                android:layout_below="@+id/sunday"
+                android:layout_toEndOf="@+id/srcDepTime"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightArrow"
+                android:src="@drawable/right_arrow"
+                android:layout_toEndOf="@+id/srcStationCode"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/sunday"
+                android:layout_marginTop="11dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desArrTime"
+                android:layout_below="@+id/sunday"
+                android:text="13:30"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/rightArrow" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desStationCode"
+                android:text="YPR"
+                android:layout_below="@+id/sunday"
+                android:layout_toEndOf="@+id/desArrTime"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

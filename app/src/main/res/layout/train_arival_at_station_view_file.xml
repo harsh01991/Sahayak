@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView1"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="7dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/cardview_light_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trainNumber"
+                android:layout_margin="10dp"
+                android:text="12345" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trainName"
+                android:layout_toEndOf="@+id/trainNumber"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:text="Jbp Ypr Super Fast Express" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingArrival"
+                android:text="Arrival"
+                android:textStyle="bold"
+                android:layout_below="@+id/trainNumber"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arrTime"
+                android:text="On time"
+                android:textColor="#1B5E20"
+                android:layout_toEndOf="@+id/headingArrival"
+                android:layout_below="@+id/trainNumber"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingSch"
+                android:layout_below="@+id/headingArrival"
+                android:text="sch:"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/schTime"
+                android:text="14:10"
+                android:layout_below="@+id/headingArrival"
+                android:layout_toEndOf="@+id/headingSch"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightArrow"
+                android:src="@drawable/right_arrow"
+                android:layout_toEndOf="@+id/schTime"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/headingArrival"
+                android:layout_marginTop="6dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingExpect"
+                android:layout_below="@+id/headingArrival"
+                android:text="expect:"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/rightArrow" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expectTime"
+                android:text="14:30"
+                android:layout_below="@+id/headingArrival"
+                android:layout_toEndOf="@+id/headingExpect"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingDeparture"
+                android:text="Departure"
+                android:textStyle="bold"
+                android:layout_below="@+id/headingSch"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/depTime"
+                android:text="On time"
+                android:textColor="#1B5E20"
+                android:layout_toEndOf="@+id/headingDeparture"
+                android:layout_below="@+id/headingSch"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingSch2"
+                android:layout_below="@+id/headingDeparture"
+                android:text="sch:"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/schTime2"
+                android:text="14:10"
+                android:layout_below="@+id/headingDeparture"
+                android:layout_toEndOf="@+id/headingSch2"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightArrow2"
+                android:src="@drawable/right_arrow"
+                android:layout_toEndOf="@+id/schTime"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/headingDeparture"
+                android:layout_marginTop="6dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingExpect2"
+                android:layout_below="@+id/headingDeparture"
+                android:text="expect:"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/rightArrow2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expectTime2"
+                android:text="14:30"
+                android:layout_below="@+id/headingDeparture"
+                android:layout_toEndOf="@+id/headingExpect2"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_seat_availability"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harsh.sahayak1.activity.SeatAvailabilityActivity"
+    android:background="#E5E8E6">
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar_main" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/my_toolbar">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/cardView1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingTrainNumber"
+                android:text="@string/trainNumber"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seatAvailTrainNo"
+                android:hint="@string/trainNumberHint"
+                android:inputType="number"
+                android:maxLength="5"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/headingTrainNumber"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingFromStation"
+                android:text="@string/stationfrom"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_below="@+id/headingTrainNumber"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seatAvailFrom"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/headingTrainNumber"
+                android:text=""
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/headingFromStation"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingToStation"
+                android:text="@string/stationTo"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_below="@+id/headingFromStation"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seatAvailTo"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seatAvailFrom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/headingToStation"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calenderHeading"
+                android:text="@string/arrivalDate"
+                android:layout_below="@id/headingToStation"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="30dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickedDate"
+                android:text=""
+                android:layout_below="@id/headingToStation"
+                android:layout_toEndOf="@+id/calenderHeading"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:focusable="false"/>
+            <!-- <Button
+                 android:layout_width="50dp"
+                 android:layout_height="30dp"
+                 android:id="@+id/dateSetButton"
+                 android:background="@color/colorAccent"
+                 android:text="SET"
+                 android:textColor="@color/cardview_light_background"
+                 android:layout_below="@id/headingToStation"
+
+                 android:layout_marginTop="30dp"
+                 android:layout_marginRight="0dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_alignRight="@id/pickedDate"/>
+     -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingQuota"
+                android:text="@string/quota"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_below="@+id/calenderHeading"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="65dp"/>
+            <Spinner
+                android:id="@+id/quotaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calenderHeading"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/headingQuota"
+                android:textColorHint="@color/colorAccent" />
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/headingClassCode"-->
+                <!--android:text="@string/classCode"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="18sp"-->
+                <!--android:layout_below="@+id/headingQuota"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_marginStart="20dp"/>-->
+            <!--<Spinner-->
+                <!--android:id="@+id/classCodeSpinner"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/headingQuota"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_toEndOf="@+id/headingClassCode"-->
+                <!--android:hint="Select Class Code"-->
+                <!--android:textColorHint="@color/colorAccent" />-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seatAvailSbmtBtn"
+                android:text="@string/submit"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="bold"
+                android:layout_below="@+id/headingQuota"
+                android:layout_marginTop="90dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/my_button" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search_trains"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harsh.sahayak1.activity.SearchTrains"
+    android:background="#E5E8E6">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar_main" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        android:elevation="7dp"
+        app:cardCornerRadius="7dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/headingFromStation"
+        android:text="@string/stationfrom"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchTrainFrom"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:layout_marginTop="40dp"
+                android:text=""
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/headingFromStation"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/headingToStation"
+                android:text="@string/stationTo"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_below="@+id/headingFromStation"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="30dp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchTrainTo"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/searchTrainFrom"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/headingToStation" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calenderHeading"
+                android:text="@string/arrivalDate"
+                android:layout_below="@id/headingToStation"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18sp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="50dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickedDate"
+                android:text=""
+                android:layout_below="@id/headingToStation"
+                android:layout_toEndOf="@+id/calenderHeading"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="10dp"
+                android:focusable="false"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seatAvailSbmtBtn"
+                android:text="@string/submit"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="bold"
+                android:layout_below="@+id/calenderHeading"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="140dp"
+                android:background="@drawable/my_button"
+                android:elevation="10dp"/>
+</RelativeLayout>
+</android.support.v7.widget.CardView>
+    </ScrollView>
+    </RelativeLayout>

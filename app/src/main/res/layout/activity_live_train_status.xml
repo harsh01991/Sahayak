@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_live_train_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harsh.sahayak1.activity.LiveTrainStatusActivity"
+    android:background="#E5E8E6"
+    >
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar_main" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_toolbar">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="50dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading"
+            android:text="@string/plzfilldetails"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/cardview_dark_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trainHeading"
+            android:layout_below="@+id/heading"
+            android:text="Train Number"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="100dp"
+            android:textSize="18sp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/liveTrainNo"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_below="@+id/trainHeading"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:hint="@string/trainNumberHint"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calenderHeading"
+            android:text="Starting Date"
+            android:layout_below="@id/liveTrainNo"
+            android:textSize="18sp"
+            android:layout_marginStart="100dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickedDate"
+        android:text=""
+        android:textAlignment="center"
+        android:layout_below="@id/calenderHeading"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:focusable="false"/>
+        <!--<Button-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:id="@+id/dateSetButton"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:text="SET"-->
+            <!--android:textColor="@color/cardview_light_background"-->
+            <!--android:layout_below="@id/calenderHeading"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:layout_alignRight="@id/pickedDate"/>-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/liveTrainSbmtBtn"
+            android:text="@string/submit"
+            android:textColor="@color/cardview_light_background"
+            android:background="@drawable/my_button"
+            android:textStyle="bold"
+            android:layout_below="@+id/pickedDate"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="80dp"/>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
+</ScrollView>
+</RelativeLayout>

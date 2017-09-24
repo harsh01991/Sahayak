@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.harsh.sahayak1">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CustomAppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TrainSchedullingActivity"
+            android:finishOnTaskLaunch="true"
+            android:label="Train Schedule"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.PnrNoActivity" />
+        <activity android:name=".activity.PnrDetailsActivity" />
+        <activity android:name=".activity.SearchTrains"
+            android:label="Search Trains"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.DetailsLiveTrainActivity"
+            android:label="Live Train Status"/>
+        <activity android:name=".activity.LiveTrainStatusActivity"
+            android:label="Live Train Status"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.SeatAvailabilityActivity"
+            android:label="Seat Availability"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.DetailsSeatAvailActivity"
+            android:label="Seat Availability"  />
+        <activity android:name=".activity.FareEnquiryActivity"
+            android:label="Fare Enquiry"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.DetailsFareEnquiryActivity"
+            android:label="Fare Enquiry"/>
+        <activity android:name=".activity.TrainSchedullingNumber"
+            android:label="Train Schedule"
+            android:windowSoftInputMode="stateHidden"
+            android:finishOnTaskLaunch="true"/>
+        <activity android:name=".activity.DetailsSearchTrainActivity"
+            android:label="Search Trains"/>
+        <activity android:name=".activity.TrainArrivalActivity"
+            android:label="Station Status"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.DetailsTrainArrivalActivity"
+            android:label="Station Status"/>
+    </application>
+
+</manifest>
